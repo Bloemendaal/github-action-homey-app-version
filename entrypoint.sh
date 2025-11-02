@@ -4,8 +4,8 @@ set -e
 
 cd /github/workspace/
 
-npm install
 npm version $1 --git-tag-version false
+npm install
 npx homey app version "$1" --changelog "$2"
 npx homey app build
 npm run check
