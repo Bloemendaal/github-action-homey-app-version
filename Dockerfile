@@ -1,4 +1,5 @@
 FROM node:lts-alpine
+RUN apk add --no-cache git
 RUN apk add jq
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x entrypoint.sh
